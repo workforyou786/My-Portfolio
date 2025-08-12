@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sahil Khan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">  Welcome !</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button> 
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+    <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#experiance-section" class="nav-link"><span>Experience</span></a></li>
+        <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+		<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+        <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certification</span></a></li>
+        <li class="nav-item"><a href="#gallery-section" class="nav-link"><span>Gallery</span></a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+    </ul>
+</div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/b1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello !</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Sahil Khan</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Full Stack Developer ',
+						'Software Engineer ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Software Engineer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://drive.google.com/file/d/1jP9-mya7du7TWEEG7cuMDDRlnGJeiXYd/view?usp=drive_link" class="btn btn-primary py-3 px-4">Download Resume</a> 
+							<!-- <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a> -->
+						</p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/abm.jpg" class="img-fluid rounded b-shadow-a" alt=""  height="200px">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Sahil Khan</span></p>
+										<p><span class="title-s">Date Of Birth: </span> <span>July 19, 2002</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Software Engineer - Full Stack</span></p>
+										<p><span class="title-s">Address: </span> <span>Lucknow, Uttar Pradesh, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Primary Skills</p>
+									<span>Java Full Stack</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Deveops / Tools</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Communication</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>LeaderShip</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Time Management</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Problem-Solving</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I'm Sahil Khan, Enthusiastic and detail-oriented aspiring Fresh Graduate with a strong academic foundation in technology. 
+									Demonstrated leadership and teamwork through college projects and event coordination roles. 
+									Passionate about building innovative, user-focused products and eager to contribute to a dynamic product team while continuing to 
+									grow in the field.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>software Engineer - Full Stack</span></li>
+									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, &amp; Finance</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology [ 2021 - 2025 ]</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+<!-- 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Microsoft Excel &amp; Tableau</span></li> -->
+									<li class="d-flex"><span>Programming Languages:</span> <span>Java, SQL, HTML, CSS, Python, C++.</span></li>
+									<li class="d-flex"><span>Frameworks and Libraries:</span> <span>Spring Boot, React, Flutter, Pandas, NumPy, Matplotlib, Hibernate, REST APIs. </span></li>                                      
+									<li class="d-flex"><span>Platforms and Environments:</span> <span>Jupyter Notebook, PostgreSQL, GitHub, Microsoft Excel, Docker, AWS(EC2 & S3), JIRA.</span></li>
+									<li class="d-flex"><span>Soft Skill / Cognitive Skill: </span> <span>Communication, Leadership, Time Management, Analytical Thinking, Problem-Solving, Presentation Skills. </span></li>
+									<li class="d-flex"><span>Coursework:</span> <span>Data Structures, Object-Oriented Programming (OOP), Computer Networking.</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Researching, Musical Instrument, Poetry.</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+        
+          </div>
+        </div>
+
+		<!-- Experience Section -->
+<section id="experiance-section">
+    <div class="row">
+        <h1 class="big-4">Experience</h1>
+        <div class="underline"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">September 2024-June 2025</span>
+                <h2>Member Of Extension Committee</h2>
+                <span class="position">Roorkee Institute Of Technology</span>
+                <p class="mt-4">
+                    Roorkee Institute of Technology (RIT), located in Roorkee, Uttarakhand, is a leading private engineering and management institution known for its modern infrastructure, industry-oriented curriculum, and strong placement support. It offers undergraduate and postgraduate programs in engineering, management, agriculture, and applied sciences.
+                    <ul>
+                        <li>Assisted in planning and executing college-wide cultural and academic events.</li>
+                        <li>Improved student engagement by organizing workshops and awareness campaigns.</li>
+                        <li>Collaborated with 10+ faculty/staff members to streamline event logistics.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education-section">
+    <div class="row">
+        <h1 class="big-4">Education</h1>
+        <div class="underline"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">2021-2025</span>
+                <h2>Bachelor of Technology</h2>
+                <span class="position">Roorkee Institute of Technology</span>
+                <p class="mt-4">Computer Science Engineering</p>
+                <p class="mt-4">Grade: A</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">2020-2021</span>
+                <h2>Senior Secondary School</h2>
+                <span class="position">Modern Academy Inter College, Lucknow, Uttar Pradesh</span>
+                <p class="mt-4">Grade: A</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">2018-2019</span>
+                <h2>High School</h2>
+                <span class="position">Modern Academy Inter College, Lucknow, Uttar Pradesh</span>
+                <p class="mt-4"> Grade: A</p>
+            </div>
+        </div>
+    </div>
+</section>
+   
+
+    <section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Projects</h1>
+        <h2 class="mb-4">Projects</h2>
+        <p>Below Are Some Projects Which Gave Me Hands-On Experience On The Technology</p>
+      </div>
+    </div>
+
+    <div class="row d-flex">
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://www.github.com/workforyou786/" class="block-20 zoom-effect" style="background-image: url('images/p1.png');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="https://www.github.com/workforyou786/">Payment Fraud Detection Using Machine Learning</a></h3>
+            <p>Payment Fraud Detection using Machine Learning involves analyzing transaction patterns to identify suspicious activities in real time. 
+              It uses algorithms like decision trees, random forests, or neural networks to detect anomalies, reduce false positives, and prevent financial losses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/workforyou786/E-Commerce" class="block-20 zoom-effect" style="background-image: url('images/p2.png');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="https://github.com/workforyou786/E-Commerce">E-Commerce Platform</a></h3>
+            <p>Developed a full-stack e-commerce web application featuring secure user authentication, shopping cart functionality, and an admin dashboard for inventory and order management. Designed and built RESTful APIs using Spring Boot and followed the MVC architecture for clean code separation and scalability. Implemented a responsive and intuitive user interface using Bootstrap, enhancing the user experience across mobile and desktop devices by 30%.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="https://github.com/workforyou786/News-Blogs" class="block-20 zoom-effect" style="background-image: url('images/rapid.png');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="https://github.com/workforyou786/News-Blogs">Rapid News Application</a></h3>
+            <p>Built a dynamic news website using HTML, CSS, and JavaScript. Enabled real-time content updates and category-wise article organization. Implemented SEO optimization and social media integration for increased visibility. Designed a responsive, mobile-friendly UI with fast loading performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row d-flex">
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/workforyou786/Student-Management-System" class="block-20 zoom-effect" style="background-image: url('images/student.png');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="https://github.com/workforyou786/Student-Management-System">Student Management System</a></h3>
+            <p>Built a predictive model for implementation of a Database Management System. This includes all the essential data required by any institution. Helps departments gather student information efficiently.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="adgdzfjkgegarg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="jvfkhgklgherhaelg">Thought Expresso - A Twitter Clone</a></h3>
+            <p>A Twitter Clone using Flutter is a cross-platform mobile app replicating core Twitter features like posting tweets, following users, real-time feeds, and likes, all built with Flutter’s UI toolkit. It often integrates Firebase for authentication, database, and push notifications.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/RishabKr15/Bike-Sharing-Demand-Prediction" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a href="https://github.com/RishabKr15/Bike-Sharing-Demand-Prediction">Disease Prediction Using Machine Learning</a></h3>
+            <p>Built a predictive model to forecast Seoul bike-sharing demand using weather and time-based features for efficient resource management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 			 <div class="row d-flex justify-content-center"> 
+          	<div class="blog-entry">
+              <a href="https://github.com/RishabKr15/EDA-Hotel-Booking-Analysis/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/RishabKr15/EDA-Hotel-Booking-Analysis/tree/main">Exploratory Data Analysis(EDA)</a></h3>
+                <p>Analyzed hotel booking data to uncover patterns in cancellations, stay durations, and seasonal trends. The project involved data cleaning, EDA, and visual insights to support strategic decisions in hospitality management.</p>
+              </div>
+            </div>
+          </div> -->
+
+<!-- 			<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/RishabKr15/EDA-Hotel-Booking-Analysis/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/RishabKr15/EDA-Hotel-Booking-Analysis/tree/main">Exploratory Data Analysis(EDA)</a></h3>
+				  <p>Analyzed hotel booking data to uncover patterns in cancellations, stay durations, and seasonal trends. The project involved data cleaning, EDA, and visual insights to support strategic decisions in hospitality management.
+					</p>
+				</div>
+			  </div>
+			</div>
+			working
+			 -->
+		
+<!-- 			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/RishabKr15/Power-BI-Sales-Dashboard?tab=readme-ov-file" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/RishabKr15/Power-BI-Sales-Dashboard?tab=readme-ov-file">Sales Analytics Report using PowerBI</a></h3>
+				  <p>Developed an interactive Power BI dashboard to analyze sales, profit, orders, and trends with dynamic filters and year-over-year comparisons across products, customers, cities, and channels.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+	
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <!-- <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+	
+	 		<a href="#" class="btn" style="display: inline-block; margin-top: 30px; margin-left: 500px; border: 1px solid #ff0057; color: white; border-radius: 8px; text-decoration: none; font-size: 16px;">Many More</a>
+			<!-- </div> -->
+		</div>
+	</section>
+	 <section class="ftco-section" id="certification-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certifications And Achievements</h1>
+            <h2 class="mb-4">Certifications And Achievements</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1x2KBlNutCsTt5z8rVj7MJxG8Kv-mRDaK/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/a1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1x2KBlNutCsTt5z8rVj7MJxG8Kv-mRDaK/view?usp=drive_link">Advanced Web Developement </a></h3>
+				<p>Training on PYTHON AND DJANGO</p> 
+				<p>Held at RIT, Roorkee</p> 
+				<p>Under Industry 4.0</p>
+				<p>Date: 2/05/2023 to 07/05/2023</p>
+
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1pC1LqzjgVXIcCqja9CXPKYCalblDi68_/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/java.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1pC1LqzjgVXIcCqja9CXPKYCalblDi68_/view?usp=drive_link"> Java training - IIT Bombay</a></h3>
+                <p>Training on Java</p> 
+				<p>Held at RIT, Roorkee</p> 
+				<p>Spoken Tutorial - IIT Bombay</p>
+				<p>Date: December 16, 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/c.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link">C Training - IIT Bombay</a></h3>
+                <p>Training on C Programming</p> 
+				<p>Held at RIT, Roorkee</p> 
+				<p>Spoken Tutorial - IIT Bombay</p>
+				<p>Date: January 31, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+	       <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1g1lb5Q5yv-DSIS1irJN5zoU3GCWSW_W9/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/python.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1g1lb5Q5yv-DSIS1irJN5zoU3GCWSW_W9/view?usp=drive_link">Python Training - IIT Bombay</a></h3>
+                <p>Training on Python 3.4.3</p> 
+				<p>Held at RIT, Roorkee</p> 
+				<p>Spoken Tutorial - IIT Bombay</p>
+				<p>Date: July 22, 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/19gDM5LftZ99506jWi0fkynpKla4bdR2V/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/dsa.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/19gDM5LftZ99506jWi0fkynpKla4bdR2V/view?usp=drive_link">Data Structure - Coding Ninja</a></h3>
+                <p>Data Structure And Algorithm </p> 
+				<p>Held at IIT Roorkee</p> 
+				<p>Coding Ninja - IIT Roorkee</p>
+				<p>Date: March 24, 2022</p>
+              </div>
+			</div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/19AEjDZtgg9eFNYNh9xxEFIVMvcLcIV2p/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/ios.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/19AEjDZtgg9eFNYNh9xxEFIVMvcLcIV2p/view?usp=drive_link">Fundamental Of IOS </a></h3>
+                <p>Training of Mac Fundamental  </p> 
+				<p>Held under Industry 4.0</p> 
+				<p>Held - RIT Roorkee</p>
+				<p>Date: Octuber, 2021</p>
+              </div>
+			</div>
+        </div>
+		<div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/anugoonj.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link"></a> Head Of The Annual Cultural Fest</h3> 
+				<p>Held at RIT, Roorkee</p> 
+				<p>Date: April, 2025</p>
+              </div>
+            </div>
+	  </div>
+	  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/c.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link">Head of The Annual Cultural Fest </a></h3>
+				<p>Held at RIT, Roorkee</p> 
+				<p>Date: April, 2024</p>
+              </div>
+			</div>
+	  </div>
+	  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+			<a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link" class="block-20 zoom-effect" style="background-image: url('images/');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1g736li8-P0v03-X4UC7EAkVP4gcAOG6i/view?usp=drive_link">Teens Rock By Yammha</a></h3>
+                <p>Musical Band performance</p> 
+				<p>Held at DLF, Delhi</p> 
+				<p>Sponsered By Yammha</p>
+				<p>Date: September, 2016</p>
+              </div>
+			</div>
+	  </div>
+		<a href="#" class="btn" style="display: inline-block; margin-top: 30px; margin-left: 500px; border: 1px solid #ff0057; color: white; border-radius: 8px; text-decoration: none; font-size: 16px;">Many More</a>
+	<br>
+	</section>
+	<div id="gallery-section" style="background-color: #000; padding: 50px 0; text-align: center;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <h1 class="sub-title" style="color: white; font-size: 36px; margin-bottom: 30px;">Professional Gallary</h1><br>
+        
+        <div class="work-list" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+            
+            <div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/upes.jpg"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">Business TEICON 2024 - UPES College</h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">Meet Many Founders and Grab Knowledge about business Developement </p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+      
+    </a>
+  </div>
+</div>
+<div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/upes.jpeg"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">Vice Chancellor of UPES</h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">Dr. Ram Sharma Amazing Professional to whom I met and get impressed by his amzing Personality.</p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+    
+    </a>
+  </div>
+</div>
+<div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/sem1.jpeg"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">Uttarakhand Thrive Summit 2025</h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">"The Uttarakhand Thrive Summit 2025, held on March 5–6 at UPES Dehradun, brought together startups, investors, and innovators for dynamic keynotes, pitch sessions, and strategic networking opportunities</p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+      
+    </a>
+  </div>
+</div>
+<div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/mange.JPG"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">LeaderShip</h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">Leadership is the art of inspiring and guiding others toward a shared vision with integrity and purpose.
+</p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+      
+    </a>
+  </div>
+</div>
+<div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/anu2k25.jpg"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">Coordinator & Co-coordinator</h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">The Head of the cultural fest leads the overall planning, coordination, and execution of the event, ensuring its success.
+Two Co-Heads support by managing key segments, handling logistics, and assisting in decision-making.
+</p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+    
+    </a>
+  </div>
+</div>
+<div class="work"
+     style="position: relative; width: 300px; margin: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+     onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.layer').style.opacity='1'; this.querySelector('.layer').style.pointerEvents='auto';"
+     onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.layer').style.opacity='0'; this.querySelector('.layer').style.pointerEvents='none';">
+
+  <img src="Images/stage management.JPG"
+       style="width: 100%; height: 400px; display: block; object-fit: cover; border-radius: 12px; transition: transform 350ms ease;">
+
+  <div class="layer"
+       style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;
+              padding: 20px; gap: 8px; text-align: center;
+              background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+              color: #fff; opacity: 0; transition: opacity 300ms ease; pointer-events: none;">
+
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">Managing Stage </h3>
+    <p style="margin: 0; font-size: 0.9rem; max-width: 85%;">A stage management team oversees the smooth flow of performances and events during the fest.
+They coordinate with performers, handle backstage operations, and ensure timely transitions.
+</p>
+    <a href="#" style="margin-top: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600;
+                       background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+      
+    </a>
+  </div>
+</div>
+
+        </div>
+        
+        <a href="#" class="btn" style="display: inline-block; margin-top: 30px; padding: 10px 25px; border: 1px solid #ff0057; color: white; border-radius: 8px; text-decoration: none; font-size: 16px;">Many More</a>
+    </div>
+</div>
+
+
+ <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Software Engineer professional with hands-on training experience.Proven expertise in Developement and project management.<p>
+		    <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1jP9-mya7du7TWEEG7cuMDDRlnGJeiXYd/view?usp=drive_link" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+  <div class="contact-row mb-5">
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Lucknow, Uttar Pradesh, 226010, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9411717785 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:rishabhkr954@gmail.com">Sahilkhanofficial81@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4"></h3><a href="https://drive.google.com/file/d/1jP9-mya7du7TWEEG7cuMDDRlnGJeiXYd/view?usp=drive_link">Download Resume</a></h3>
+	          </div>
+          </div>
+          		<div class="contact-right" style="display:flex; flex-direction:column; gap:15px; width:50%; margin:auto;">
+    <form name="submit-to-google-sheet" style="display:flex; flex-direction:column; gap:15px;">
+        <input type="text" name="Name" placeholder="Your Name" required 
+               style="padding:12px; background:#222; border:none; border-radius:5px; color:white; font-size:16px;">
+        <input type="email" name="email" placeholder="Your Email" required
+               style="padding:12px; background:#222; border:none; border-radius:5px; color:white; font-size:16px;">
+        <textarea name="Message" rows="6" placeholder="Your Message" 
+                  style="padding:12px; background:#222; border:none; border-radius:5px; color:white; font-size:16px;"></textarea>
+        <button type="submit" class="btn btn2" 
+                style="background:#ff165d; color:white; border:none; border-radius:5px; padding:12px; font-size:16px; cursor:pointer;">
+            Submit
+        </button>
+    </form>
+    <span id="msg" style="color:lime; font-size:14px;"></span>
+</div>
+
+	        
+          </div>
+    </div>		
+ </div> 		
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on :  </li>
+					  <!-- <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sahilkhan81/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.instagram.com/_.mr._.khan.____/"><span class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="https://github.com/workforyou786/"><span class="icon-github"></span></a></li> 
+					<li class="ftco-animate"><a href="https://x.com/sahilkh14680444/"><span class="icon-twitter"></span></a></li> 
+<!-- 				<li class="ftco-animate"> <a href="https://medium.com/@rishabhkr954" target="_blank"><span class="fab fa-medium"></span> </a></li> -->
+
+					
+<!-- </a> -->
+					  <!-- <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Sahil Khan</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzXn9GMl2EsZWUtZz1ZTU2WUzGLT8RhBK36OrmhIfrn9eNLi1Heeosi79KSc6rLGgDo/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully!!"
+            setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  </body>
+</html>
